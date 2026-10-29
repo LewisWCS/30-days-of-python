@@ -7,7 +7,7 @@ dog['Age'] = 2
 print(dog)
 
 student = {'First_Name':'Lewis','Second_Name':'White','Gender':'Male'
-,'Age':'22','martial_status':'single','Skills': ['Gaming','coding','math'],
+,'Age':22,'martial_status':'single','Skills': ['Gaming','coding','math'],
 'Country':'England','City':'St Helens','Address':'Sky Plaza'        
  }
 print(len(student))
