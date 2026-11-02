@@ -76,7 +76,108 @@ def capa_list(list):
         lst.insert(last_index(list), i)
     return lst
 print(capa_list(['lewis','megan','mother']))
+food_stuff = ['Potato', 'Tomato', 'Mango', 'Milk'];
+numbers = [2, 3, 7, 9];
 
-def add_item()
+def add_item(my_list,item):
+    my_list.append(item)
+    return my_list
 
-        
+print(add_item(food_stuff, 'Meat'))     # ['Potato', 'Tomato', 'Mango', 'Milk','Meat'];
+print(add_item(numbers, 5))      # [2, 3, 7, 9, 5]
+
+
+numbers = [2, 3, 7, 9]
+food_stuff = ['Potato', 'Tomato', 'Mango', 'Milk']
+
+
+def remove_item(my_list,item):
+    my_list.remove(item)
+    return my_list
+
+print(remove_item(food_stuff, 'Mango'))  # ['Potato', 'Tomato', 'Milk'];
+print(remove_item(numbers, 3))  # [2, 7, 9]  
+
+
+def sum_of_number(n):
+    total = 0
+    for i in range(n + 1):
+        total = total + i  
+    return total
+print(sum_of_number(10))
+
+def sum_of_even(n):
+    total = 0 
+    for i in range(n+1):
+        if i % 2 == 0:
+            total = total + i 
+        else:
+            continue
+    return total
+print(sum_of_even(10))
+
+def even_and_odds(n):
+    even_numbers = 0
+    odd_numbers = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            even_numbers = even_numbers + 1 
+        else:
+            odd_numbers = odd_numbers + 1 
+    print('The amount of even numbers are', even_numbers)
+    print('The amount of odd numbers are', odd_numbers)
+even_and_odds(10)
+
+def is_empty(my_list):
+    if len(my_list) == 0:
+        return True
+    else:
+        return False
+
+print(is_empty([]))
+
+
+def calculate_mean(*args):
+    for i in range(len(args)):
+        return sum(args) / len(args)
+
+print('The mean of the list of numbers',calculate_mean(20,10,30,30,20))
+
+def calculate_medium(*args):
+    number = sorted(args)
+    middle_index = int(len(number) / 2)
+    for i in range(len(number)):
+        return number[middle_index]
+
+print('The middle index is', calculate_medium(10,9,5,6,7,8,9))
+
+def calculate_mode(*args):
+    mode = args[0]
+    highest_count = 0
+
+    for num in args:
+        count = args.count(num)
+        if count > highest_count:
+            highest_count = count
+            mode = num
+    return mode
+print('The mode of the list is', calculate_mode(2,3,4,5,6,7,8,8))
+def range_calc(*args):
+    number = sorted(args)
+    last_index = len(args) - 1
+    range = number[last_index] - number[0]
+    return range
+print('The range of the list is', range_calc(2,4,5,6,1,5,6,7,9))
+
+def greet(n=''):
+    if n != '':
+        print(f'Hello , {n}')
+    else:
+        print('Hello, guest')
+greet()
+greet('Lewis')
+    
+
+
+    
+
