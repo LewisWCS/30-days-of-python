@@ -34,3 +34,49 @@ def check_sesason(m):
     else:
         print('Number not between 0-12')
 check_sesason(9)
+
+def calculate_slope(x1,x2,y1,y2):
+    slope = (y2 - y1) - (x2 - x1)
+    print('The slope will be:', slope)
+calculate_slope(5,7,9,5)
+
+import math
+
+def quadratic_form(a,b,c):
+    discrim = (b**2) - 4 * a * c
+
+    x1 = (-b + math.sqrt(discrim)) / (2 * a)
+    x2 = (-b - math.sqrt(discrim)) / (2 * a)
+
+    return(x1,x2)
+
+print(quadratic_form(1,-5,6))
+
+def print_list(list):
+    for i in list:
+        print(i)
+
+print_list(['Lewis','Megan','Mother'])
+
+def reverse_list(list):
+    lst = []
+    for i in list:
+        lst.insert(0, i)
+    return(lst)
+print(reverse_list(['Lewis','Megan','Mother']))
+
+def last_index(n):
+    last = len(n) - 1
+    return(last)
+
+def capa_list(list):
+    lst=[]
+    for i in list:
+        i = i.upper()
+        lst.insert(last_index(list), i)
+    return lst
+print(capa_list(['lewis','megan','mother']))
+
+def add_item()
+
+        
