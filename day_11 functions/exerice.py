@@ -176,7 +176,13 @@ def greet(n=''):
         print('Hello, guest')
 greet()
 greet('Lewis')
-    
+
+def show_args(**args):
+    print('Recieved:', end='')
+    for keys,value in args.items():
+        print(f'{keys}: {value}', end =', ')
+show_args(Name = 'Lewis',Age = 22, Uni = 'Uni Of Leeds')
+                
 
 
     
